@@ -1,12 +1,12 @@
 'use client'
 
 import { Github } from 'lucide-react'
-import UploadCard from './parts/uploadCard';
-import CanvasCard from './parts/canvasCard';
+import UploadCard from "@/app/parts/uploadCard"
+import CanvasCard from "@/app/parts/canvasCard";
 import { useState } from 'react';
 import Image from 'next/image';
 
-export default function Home() {
+export default function Jr() {
   const [activeComponent, setActiveComponent] = useState('upload');
 
   const toggleComponent = () => {
