@@ -1,8 +1,6 @@
 'use client'
 
-import UploadCard from "@/components/uploadCard"
-
-export default function Home() {
+export default function editor() {
   return (
     <>
       <div className="flex min-h-screen flex-col bg-[#121313] text-gray-100">
@@ -18,7 +16,6 @@ export default function Home() {
               Realtime subscriptions, Storage, and Vector embeddings.
             </p>
           </div>
-          <UploadCard />
         </main>
       </div>
     </>
