@@ -1,7 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Upload } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Upload } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function UploadCard() {
   const router = useRouter();
@@ -10,17 +10,21 @@ export default function UploadCard() {
     const file = event.target.files[0];
     if (file) {
       const imageUrl = URL.createObjectURL(file);
-      router.push(`/editor?url=${encodeURIComponent(imageUrl)}&name=${encodeURIComponent(file.name)}`);
+      router.push(
+        `/editor?url=${encodeURIComponent(imageUrl)}&name=${encodeURIComponent(file.name)}`
+      );
     }
   }
 
   return (
     <>
-      <Card className="w-full max-w-md bg-[#161617] border-green-900 shadow-lg">
+      <Card className="w-full max-w-md shadow-xl bg-gradient-to-b from-background to-secondary/50">
         <CardContent className="pt-6">
           <div className="mb-6 text-center">
-            <h2 className="text-2xl font-bold text-primary">Upload Your File</h2>
-            <p className="text-gray-400 mt-2">Drag & drop or click to select</p>
+            <h2 className="text-2xl font-bold text-primary">
+              Upload Your File
+            </h2>
+            <p className="mt-2">Drag & drop or click to select</p>
           </div>
           <div className="space-y-6">
             <div className="relative">
@@ -36,7 +40,7 @@ export default function UploadCard() {
               >
                 <div className="text-center">
                   <Upload className="mx-auto h-12 w-12 text-gray-500 mb-4" />
-                  <span className="text-sm font-medium text-gray-300">
+                  <span className="text-sm font-medium">
                     Choose a file or drag it here
                   </span>
                 </div>
