@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, React } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import operations from '@/lib/canvas';
 import { useRouter } from 'next/navigation';
 import { Suspense } from 'react';
@@ -81,54 +82,80 @@ function EditorContent() {
   }
 
   return (
-    <div className="flex flex-1 flex-col items-center justify-center p-4 space-y-12">
-      <div className="controls space-y-3">
-        <canvas ref={canvasRef} width={500} height={500} />
-        <Input
-          type="number"
-          placeholder="rows"
-          value={rows}
-          onChange={(e) => {
-            setRows(Number(e.target.value));
-          }}
-        />
-        <Input
-          type="number"
-          placeholder="cols"
-          value={cols}
-          onChange={(e) => {
-            setCols(Number(e.target.value));
-          }}
-        />
-        <Input
-          type="number"
-          placeholder="line"
-          value={line}
-          onChange={(e) => {
-            setLine(Number(e.target.value));
-          }}
-        />
-        <Input
-          type="color"
-          value={color}
-          onChange={(e) => {
-            setColor(e.target.value);
-          }}
-        />
-        <Button
-          onClick={() => {
-            controls();
-          }}
-        >
-          apply changes
-        </Button>
-        <Button
-          onClick={() => {
-            save();
-          }}
-        >
-          save
-        </Button>
+    <div className="flex flex-1 flex-col items-center justify-center p-10 space-y-12">
+      <div className="controls flex justify-center flex-col sm:flex-col md:flex-col lg:flex-row space-y-3 shadow-xl p-5 rounded-3xl">
+        <div>
+          <canvas ref={canvasRef} width={500} height={500} />
+        </div>
+        <div className="p-5 space-y-3">
+          <div>
+            <Label htmlFor="rows">Rows Count</Label>
+            <Input
+              id="rows"
+              type="number"
+              placeholder="rows"
+              value={rows}
+              onChange={(e) => {
+                setRows(Number(e.target.value));
+              }}
+            />
+          </div>
+
+          <div>
+            <Label htmlFor="rows">cols Count</Label>
+            <Input
+              id="rows"
+              type="number"
+              placeholder="rows"
+              value={rows}
+              onChange={(e) => {
+                setRows(Number(e.target.value));
+              }}
+            />
+          </div>
+
+          <div>
+            <Label htmlFor="line">line width</Label>
+            <Input
+              id="line"
+              type="number"
+              placeholder="line"
+              value={line}
+              onChange={(e) => {
+                setLine(Number(e.target.value));
+              }}
+            />
+          </div>
+
+          <div>
+            <Label htmlFor="color">line color</Label>
+            <Input
+              id="color"
+              type="color"
+              value={color}
+              onChange={(e) => {
+                setColor(e.target.value);
+              }}
+            />
+          </div>
+
+          <div className="flex flex-col gap-2 pt-5">
+            <Button
+              onClick={() => {
+                controls();
+              }}
+            >
+              apply changes
+            </Button>
+            <Button
+              onClick={() => {
+                save();
+              }}
+            >
+              save
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { Github } from 'lucide-react';
 
 export default function footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 shadow-xl">
+    <footer className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 text-gray-600 shadow-xl">
       <div className="container mx-auto py-6 px-4 text-center">
         <p>&copy; 2023 StarUpload. All rights reserved.</p>
         <a

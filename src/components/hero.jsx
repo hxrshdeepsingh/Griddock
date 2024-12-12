@@ -12,7 +12,7 @@ export default function Hero() {
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
             Beautiful
           </span>{' '}
-          Interfaces
+          Grids
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl">
           Craft stunning user experiences with our intuitive design tools and

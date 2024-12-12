@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { Button } from './ui/button';
-import { Menu } from 'lucide-react';
+import { Instagram, Github } from 'lucide-react';
 
 export default function header() {
   return (
@@ -12,19 +11,13 @@ export default function header() {
         >
           Griddock
         </Link>
-        <div className="md:hidden">
-          <Button variant="ghost" size="icon">
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Open menu</span>
-          </Button>
-        </div>
-        <ul className="hidden md:flex space-x-8">
+        <ul className="flex space-x-8">
           <li>
             <Link
               href="#"
               className="text-gray-600 hover:text-indigo-600 transition-colors"
             >
-              Home
+              <Instagram strokeWidth={3} />
             </Link>
           </li>
           <li>
@@ -32,23 +25,7 @@ export default function header() {
               href="#"
               className="text-gray-600 hover:text-indigo-600 transition-colors"
             >
-              Features
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Pricing
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="#"
-              className="text-gray-600 hover:text-indigo-600 transition-colors"
-            >
-              Contact
+              <Github strokeWidth={3} />
             </Link>
           </li>
         </ul>
