@@ -1,8 +1,7 @@
 'use client';
 
-import UploadCard from '@/components/uploadCard';
-import { BenefitsSection } from '@/components/benefits';
 import Hero from '@/components/hero';
+import { BenefitsSection } from '@/components/benefits';
 
 export default function Home() {
   return (
