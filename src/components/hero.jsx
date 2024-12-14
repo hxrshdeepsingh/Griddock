@@ -1,6 +1,3 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Menu } from 'lucide-react';
 import UploadCard from './uploadCard';
 
 export default function Hero() {
@@ -15,8 +12,8 @@ export default function Hero() {
           Grids
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl">
-          Craft stunning user experiences with our intuitive design tools and
-          components.
+          Overlay gridlines on your images to simplify sketching outlines with
+          precision and ease.
         </p>
         <div className="mt-12 relative w-full flex justify-center max-w-4xl">
           <UploadCard />

@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: 'Grds fori sketch..',
-  description: 'Grds fori sketch...',
+  title: 'Grids for sketch..',
+  description: 'Grids for sketch...',
 };
 
 export default function RootLayout({ children }) {

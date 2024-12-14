@@ -14,16 +14,18 @@ export default function header() {
         <ul className="flex space-x-8">
           <li>
             <Link
-              href="#"
+              href="https://www.instagram.com/hxrshdeepsingh/"
               className="text-gray-600 hover:text-indigo-600 transition-colors"
+              target="_blank"
             >
               <Instagram strokeWidth={3} />
             </Link>
           </li>
           <li>
             <Link
-              href="#"
+              href="https://github.com/hxrshdeepsingh"
               className="text-gray-600 hover:text-indigo-600 transition-colors"
+              target="_blank"
             >
               <Github strokeWidth={3} />
             </Link>

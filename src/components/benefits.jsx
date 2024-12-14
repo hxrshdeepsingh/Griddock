@@ -7,11 +7,10 @@ export function BenefitsSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-primary">
-              Why Choose BentoApp?
+              Why Choose Griddock?
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Discover the benefits of using our platform for all your file
-              management needs.
+              Discover the benefits of using our platform.
             </p>
           </div>
         </div>
@@ -31,17 +30,16 @@ export function BenefitsSection() {
             </div>
             <h3 className="text-xl font-bold">Secure Storage</h3>
             <p className="text-sm text-muted-foreground">
-              Your files are encrypted and stored securely in our cloud
-              infrastructure.
+              Your files are not stored in our cloud infrastructure.
             </p>
           </div>
           <div className="flex flex-col items-center space-y-4 text-center">
             <div className="rounded-full bg-primary/10 p-4">
               <CheckCircle className="h-10 w-10 text-primary" />
             </div>
-            <h3 className="text-xl font-bold">Easy Collaboration</h3>
+            <h3 className="text-xl font-bold">High-Quality Images</h3>
             <p className="text-sm text-muted-foreground">
-              Share files and folders with your team or clients effortlessly.
+              Upload and download images without compromising quality.
             </p>
           </div>
         </div>
