@@ -109,7 +109,7 @@ function EditorContent() {
               placeholder="rows"
               value={rows}
               onChange={(e) => {
-                setRows(Number(e.target.value));
+                setCols(Number(e.target.value));
               }}
             />
           </div>
