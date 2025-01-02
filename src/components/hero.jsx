@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="">
       <main className="container mx-auto px-4 md:px-6 py-12 md:py-24 flex flex-col items-center text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 leading-tight">
-          Create{' '}
+          🔥Create{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">
             Beautiful
           </span>{' '}
