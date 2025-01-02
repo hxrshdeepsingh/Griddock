@@ -9,7 +9,7 @@ export default function header() {
           href="/"
           className="text-2xl font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
         >
-          Griddock
+          🔥Griddock
         </Link>
         <ul className="flex space-x-8">
           <li>
