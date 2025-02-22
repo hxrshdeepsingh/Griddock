@@ -8,6 +8,9 @@ import operations from '@/lib/canvas'
 import { useRouter } from 'next/navigation'
 import { Suspense } from 'react'
 
+import Cropper from 'react-easy-crop'
+import { useCallback } from 'react'
+
 function EditorContent() {
   const [rows, setRows] = useState(4)
   const [cols, setCols] = useState(4)
@@ -127,13 +130,15 @@ function EditorContent() {
       <Button
         onClick={() => {
           controls()
-        }}>
+        }}
+      >
         apply changes
       </Button>
       <Button
         onClick={() => {
           save()
-        }}>
+        }}
+      >
         save
       </Button>
     </>
@@ -141,9 +146,29 @@ function EditorContent() {
 }
 
 export default function Editor() {
+  const [crop, setCrop] = useState({ x: 0, y: 0 })
+  const [zoom, setZoom] = useState(5)
+
+  const params = useSearchParams()
+  const url = params.get('url')
+
+  const onCropComplete = (croppedArea, croppedAreaPixels) => {
+    console.log(croppedArea, croppedAreaPixels)
+  }
   return (
-    <Suspense fallback={<div>Loading editor...</div>}>
-      <EditorContent />
-    </Suspense>
+    <>
+      <div className='relative h-[500px] w-[500px]'>
+        <Cropper
+          image={url}
+          crop={crop}
+          zoom={2}
+          aspect={1 / 1}
+          onCropChange={setCrop}
+          onCropComplete={onCropComplete}
+          onZoomChange={setZoom}
+        />
+      </div>
+      <Suspense fallback={<div>Loading editor...</div>}>{/* <EditorContent /> */}</Suspense>
+    </>
   )
 }
