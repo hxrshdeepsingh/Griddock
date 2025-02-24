@@ -1,4 +1,4 @@
-import { create } from 'zustand';
+import { create } from 'zustand'
 
 const useStore = create((set) => ({
   IMAGE_NAME: 'default.png',
@@ -10,4 +10,4 @@ const useStore = create((set) => ({
   setVal: (key, value) => set((state) => ({ [key]: value })),
 }))
 
-export default useStore;
+export default useStore
