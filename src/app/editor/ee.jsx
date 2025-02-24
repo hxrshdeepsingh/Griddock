@@ -8,7 +8,6 @@ import operations from '@/lib/canvas'
 import { useRouter } from 'next/navigation'
 import { Suspense } from 'react'
 
-import Cropper from 'react-easy-crop'
 import { useCallback } from 'react'
 
 function EditorContent() {

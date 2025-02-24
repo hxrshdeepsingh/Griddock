@@ -1,23 +1,25 @@
-import { Card, CardContent } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-import { Upload } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import useStore from '@/lib/store'
 
 export default function UploadCard() {
   const router = useRouter()
+  const { IMAGE_NAME, IMAGE_URL, setVal } = useStore()
 
-  function handleImageUpload(event) {
-    const file = event.target.files[0]
+  function handleImageUpload(e) {
+    const file = e.target.files[0]
     if (file) {
-      const imageUrl = URL.createObjectURL(file)
-      router.push(`/editor?url=${encodeURIComponent(imageUrl)}&name=${encodeURIComponent(file.name)}`)
+      const url = URL.createObjectURL(file)
+      setVal('IMAGE_URL', url)
+      setVal('IMAGE_NAME', encodeURIComponent(file.name))
+
+      router.push(`/playground`)
     }
   }
 
   return (
     <>
-      <Input type='file' onChange={handleImageUpload} className='hidden' id='file-upload' />
-      <Upload className='mx-auto h-14 w-14 text-primary mb-4' />
+      <Input type='file' onChange={handleImageUpload} />
     </>
   )
 }
