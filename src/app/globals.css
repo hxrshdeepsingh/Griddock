@@ -73,8 +73,6 @@
   border: 2px solid rgb(25, 0, 255);
 }
 
-
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
