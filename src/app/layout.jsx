@@ -1,5 +1,6 @@
 import './globals.css'
 import localFont from 'next/font/local'
+import FloatDock from '@/components/floatDock'
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -15,7 +16,10 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <FloatDock />
+        {children}
+      </body>
     </html>
   )
 }

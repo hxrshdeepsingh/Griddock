@@ -72,3 +72,14 @@
   background-color: rgb(236, 236, 236);
   border: 2px solid rgb(25, 0, 255);
 }
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
